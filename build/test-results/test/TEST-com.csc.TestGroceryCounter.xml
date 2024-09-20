@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.csc.TestGroceryCounter" tests="10" skipped="0" failures="0" errors="0" timestamp="2024-09-14T19:30:12" hostname="Bens-Air.attlocal.net" time="0.016">
+<testsuite name="com.csc.TestGroceryCounter" tests="10" skipped="0" failures="0" errors="0" timestamp="2024-09-20T23:47:59" hostname="Bens-Air.attlocal.net" time="0.015">
   <properties/>
-  <testcase name="testManyOverflows()" classname="com.csc.TestGroceryCounter" time="0.008"/>
+  <testcase name="TestGroceryCounterConstructor()" classname="com.csc.TestGroceryCounter" time="0.008"/>
+  <testcase name="testManyOverflows()" classname="com.csc.TestGroceryCounter" time="0.0"/>
   <testcase name="testClear()" classname="com.csc.TestGroceryCounter" time="0.0"/>
-  <testcase name="testIncrementTenths()" classname="com.csc.TestGroceryCounter" time="0.0"/>
-  <testcase name="testNumberOfOverflows()" classname="com.csc.TestGroceryCounter" time="0.0"/>
-  <testcase name="testCounterUpperLimit()" classname="com.csc.TestGroceryCounter" time="0.0"/>
+  <testcase name="testIncrementTenths()" classname="com.csc.TestGroceryCounter" time="0.001"/>
+  <testcase name="testNumberOfOverflows()" classname="com.csc.TestGroceryCounter" time="0.001"/>
+  <testcase name="testCounterUpperLimit()" classname="com.csc.TestGroceryCounter" time="0.001"/>
   <testcase name="testIncrementHundredths()" classname="com.csc.TestGroceryCounter" time="0.0"/>
   <testcase name="testIncrementOnes()" classname="com.csc.TestGroceryCounter" time="0.001"/>
-  <testcase name="testIncrementTens()" classname="com.csc.TestGroceryCounter" time="0.0"/>
+  <testcase name="testIncrementTens()" classname="com.csc.TestGroceryCounter" time="0.001"/>
   <testcase name="testOverflowAtUpperLimit()" classname="com.csc.TestGroceryCounter" time="0.0"/>
-  <testcase name="itWorks()" classname="com.csc.TestGroceryCounter" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

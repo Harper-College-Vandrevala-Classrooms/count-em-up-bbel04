@@ -9,6 +9,21 @@ public class GroceryCounter {
   private int[] counter = new int[]{0, 0, 0, 0};
   private int overflows = 0;
 
+  public GroceryCounter() { //default constructor
+    counter = new int[]{0,0,0,0};
+  }
+
+  public GroceryCounter(int tens, int ones, int tenths, int hundredths) { //initialized counter
+    if ((tens <= 9 && 0 <= tens) && (ones <= 9 && 0 <= ones) && (tenths <= 9 && 0 <= tenths) && (hundredths <= 9 && 0 <= hundredths)) {
+      counter = new int[] {tens, ones, tenths, hundredths};
+    }
+    else {
+      System.out.println("Counter initialization out of bounds. Default to 00.00.");
+      counter = new int[] {0, 0, 0, 0};
+    }
+    
+  }
+
   void incrementHundredths() { 
     // Check if max counter value is reached (9999), then reset and increment overflow
     if (counter[0] == 9 && counter[1] == 9 && counter[2] == 9 && counter[3] == 9) {
@@ -80,7 +95,8 @@ public class GroceryCounter {
   }
 
   public static void main(String[] args) {
-    GroceryCounter counter = new GroceryCounter();
+    GroceryCounter counter = new GroceryCounter(1, 0, 0, 0);
+    GroceryCounter counter2 = new GroceryCounter();
 
     //counter.incrementTenths();
     for (int i = 0; i < 10000; i++) {
@@ -92,7 +108,7 @@ public class GroceryCounter {
     counter.clear();
 
     for (int i = 0; i < 10; i++) {
-      counter.incrementOnes();
+      counter2.incrementOnes();
     }
 
     System.out.println(counter.total());
@@ -112,15 +128,20 @@ public class GroceryCounter {
     System.out.println(counter.total());
 
     for (int i = 0; i < 22; i++) {
-      counter.incrementTens();
+      counter2.incrementTens();
     }
 
-    System.out.println(counter.total());
-    System.out.println(counter.numberOfOverflows());
+    System.out.println("Counter1 Total: " + counter.total());
+    System.out.println("Counter 1 Number of Overflows: " + counter.numberOfOverflows());
+    System.out.println("Counter 2 Total: " + counter2.total());
+    System.out.println("Counter 2 Number of Overflows: " + counter2.numberOfOverflows());
 
     counter.clear();   //roll back
+    counter2.clear();
 
-    System.out.println(counter.total());
-    System.out.println(counter.numberOfOverflows());
+    System.out.println("Counter1 Total: " + counter.total());
+    System.out.println("Counter 1 Number of Overflows: " + counter.numberOfOverflows());
+    System.out.println("Counter 2 Total: " + counter2.total());
+    System.out.println("Counter 2 Number of Overflows: " + counter2.numberOfOverflows());
   } 
 }
